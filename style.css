@@ -2,32 +2,42 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --verde: #009c3b;
+    --verde-dark: #006b2d;
+    --amarelo: #ffdf00;
+    --azul: #002776;
+    --azul-dark: #001b52;
+    --branco: #ffffff;
+    --preto: #000000;
+    --cinza: #334155;
+    --shadow: 0 12px 30px rgba(0,0,0,.25);
 }
 
 html{
     scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
-
 
 body{
     min-height: 100vh;
-    padding: 20px;
-
+    padding: 25px;
+    overflow-x: hidden;
     background:
-        radial-gradient(circle at top left, rgba(255,223,0,0.35), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(0,39,118,0.35), transparent 30%),
+        radial-gradient(circle at top left, rgba(255,223,0,.25), transparent 25%),
+        radial-gradient(circle at bottom right, rgba(0,39,118,.25), transparent 25%),
         linear-gradient(
-            135deg,
-            #009c3b,
-            #006b2d,
-            #ffdf00,
-            #002776,
-            #009c3b
+            140deg,
+            var(--verde),
+            var(--verde-dark),
+            var(--amarelo),
+            var(--azul),
+            var(--verde)
         );
-
-    background-size: 400% 400%;
-    animation: copaBrasil 15s ease infinite;
+    background-size: 350% 350%;
+    animation: fundoBrasil 12s ease infinite;
 }
 
 body::before{
@@ -35,31 +45,26 @@ body::before{
     position: fixed;
     inset: 0;
     background-image:
-        repeating-linear-gradient(
-            90deg,
-            rgba(255,255,255,0.03) 0px,
-            rgba(255,255,255,0.03) 2px,
-            transparent 2px,
-            transparent 40px
+        linear-gradient(
+            45deg,
+            rgba(255,255,255,.03) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255,255,255,.03) 50%,
+            rgba(255,255,255,.03) 75%,
+            transparent 75%
         );
+    background-size: 40px 40px;
     pointer-events: none;
 }
 
-@keyframes copaBrasil{
+@keyframes fundoBrasil{
     0%{
         background-position: 0% 50%;
     }
 
-    25%{
-        background-position: 50% 100%;
-    }
-
     50%{
         background-position: 100% 50%;
-    }
-
-    75%{
-        background-position: 50% 0%;
     }
 
     100%{
@@ -67,96 +72,81 @@ body::before{
     }
 }
 
-
 .hero{
     width: 100%;
+    padding: 60px 40px;
+    margin-bottom: 35px;
     text-align: center;
-    padding: 50px;
-    margin-bottom: 30px;
-    background: rgba(0,0,0,0.45);
-    color: white;
-    border-radius: 50px;
-    backdrop-filter: blur(8px);
-    border: 5px solid rgba(255,223,0,.4);
+    border-radius: 30px;
+    background: rgba(0,0,0,.50);
+    backdrop-filter: blur(10px);
+    border: 3px solid rgba(255,223,0,.4);
 }
 
 .hero h1{
-    font-size: 3rem;
-    color: #ffdf00;
-    margin-bottom: 10px;
+    font-size: 3.2rem;
+    color: var(--amarelo);
     text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
 }
 
 .hero p{
     font-size: 1rem;
-    color: #dbeafe;
+    color: #f1f5f9;
 }
 
 .banner{
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 25px;
+    display: flex;
     align-items: center;
-    background: rgba(255,255,255,.95);
+    gap: 25px;
     padding: 25px;
-    border-radius: 20px;
     margin-bottom: 40px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.95);
+    box-shadow: var(--shadow);
 }
 
 .banner img{
-    width: 100%;
+    width: 140px;
 }
 
 .banner h2{
-    color: #009c3b;
-    margin-bottom: 8px;
+    color: var(--verde);
+    margin-bottom: 10px;
 }
 
 .banner p{
-    color: #334155;
+    color: var(--cinza);
+    line-height: 1.5;
 }
-
 
 .menu{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 20px;
 }
 
 .card{
-    text-decoration: none;
+    min-height: 200px;
     padding: 25px;
-    border-radius: 18px;
-    color: white;
-    min-height: 180px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    transition: .3s;
-    box-shadow: 0 10px 20px rgba(0,0,0,.25);
+    text-decoration: none;
+    color: var(--branco);
+    box-shadow: var(--shadow);
+    transition: .35s ease;
 }
 
 .card:hover{
-    transform: translateY(-8px) scale(1.03);
+    transform: translateY(-10px) scale(1.03);
 }
-
-
-
-
-.verde{
-    background: linear-gradient(135deg,#009c3b,#006b2d);
-}
-
-.amarelo{
-    background: linear-gradient(135deg,#ffdf00,#d4a500);
-    color: black;
-}
-
-
 
 .card h3{
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 10px;
 }
 
@@ -164,23 +154,38 @@ body::before{
     font-size: .95rem;
 }
 
+.verde{
+    background: linear-gradient(
+        135deg,
+        var(--verde),
+        var(--verde-dark)
+    );
+}
+
+.amarelo{
+    background: linear-gradient(
+        135deg,
+        var(--amarelo),
+        #d4a500
+    );
+    color: var(--preto);
+}
 
 .caixa{
-    max-width: 750px;
+    max-width: 800px;
     margin: auto;
-    background: rgba(255,255,255,.95);
     padding: 35px;
     border-radius: 20px;
-    border-top: 8px solid #ffdf00;
-    box-shadow: 0 15px 30px rgba(0,0,0,.25);
+    background: rgba(255,255,255,.96);
+    border-top: 8px solid var(--amarelo);
+    box-shadow: var(--shadow);
 }
 
 .caixa h2{
     text-align: center;
-    margin-bottom: 10px;
-    color: #009c3b;
+    margin-bottom: 20px;
+    color: var(--verde);
 }
-
 
 .imagem-exercicio{
     width: 180px;
@@ -190,92 +195,96 @@ body::before{
 }
 
 .imagem-exercicio:hover{
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
-
 
 input{
     width: 100%;
     padding: 14px;
     margin: 12px 0;
     border: 2px solid #cbd5e1;
-    border-radius: 8px;
+    border-radius: 10px;
     background: #f8fafc;
 }
 
 input:focus{
     outline: none;
-    border-color: #009c3b;
+    border-color: var(--verde);
 }
-
 
 button{
     width: 100%;
-    padding: 14px;
-    background: linear-gradient(135deg,#009c3b,#006b2d);
-    color: white;
+    padding: 15px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    color: var(--branco);
+    background: linear-gradient(
+        135deg,
+        var(--verde),
+        var(--verde-dark)
+    );
     transition: .3s;
 }
 
 button:hover{
-    transform: scale(1.02);
-    background: linear-gradient(135deg,#00b140,#007a33);
+    transform: scale(1.03);
 }
-
 
 .resultado{
     margin-top: 20px;
     padding: 18px;
     background: #dcfce7;
-    border-left: 6px solid #009c3b;
-    border-radius: 8px;
+    border-left: 6px solid var(--verde);
+    border-radius: 10px;
     color: #14532d;
     font-weight: bold;
 }
 
-
 .voltar{
     display: inline-block;
     margin-top: 20px;
-    padding: 12px 18px;
+    padding: 12px 20px;
     text-decoration: none;
-    background: #002776;
-    color: white;
-    border-radius: 8px;
+    border-radius: 10px;
+    background: var(--azul);
+    color: var(--branco);
     transition: .3s;
 }
 
 .voltar:hover{
-    background: #001b52;
+    background: var(--azul-dark);
 }
 
-
 footer{
-    text-align: center;
     margin-top: 40px;
-    color: white;
+    text-align: center;
+    color: var(--branco);
     font-size: 14px;
     font-weight: bold;
 }
 
-
 @media(max-width: 768px){
+    .hero h1{
+        font-size: 2.2rem;
+    }
+
     .banner{
-        grid-template-columns: 1fr;
+        flex-direction: column;
         text-align: center;
     }
 
-    .hero h1{
-        font-size: 2rem;
+    .banner img{
+        width: 120px;
     }
 
     .menu{
         grid-template-columns: 1fr;
     }
-}
 
+    .caixa{
+        padding: 25px;
+    }
+}
