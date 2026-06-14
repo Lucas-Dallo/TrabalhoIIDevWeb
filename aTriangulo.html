@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Triângulos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="container-principal">
+
+        <header>
+            <h1>Analisador de Triângulos</h1>
+        </header>
+
+        <figure>
+            <img
+                src="IMG\8661511.png"
+                alt="Figura"
+                class="icone-triangulo" width=300px>
+                
+        </figure>
+
+        <div class="campos">
+
+            <input
+                type="number"
+                id="lado1"
+                placeholder="Informe o primeiro lado">
+
+            <input
+                type="number"
+                id="lado2"
+                placeholder="Informe o segundo lado">
+
+            <input
+                type="number"
+                id="lado3"
+                placeholder="Informe o terceiro lado">
+
+        </div>
+
+        <button onclick="verificarTriangulo()">
+            Analisar
+        </button>
+
+        <p id="resultado" class="mensagem"></p>
+
+        <nav>
+            <a href="index.html" class="botao-retorno">
+                Voltar para a página inicial
+            </a>
+        </nav>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

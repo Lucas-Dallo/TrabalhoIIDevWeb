@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos da Lanchonete</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="caixa">
+
+        <section class="topo">
+            <h2>🍔 Sistema da Lanchonete</h2>
+
+            <img
+                src="IMG\5536161.png"
+                alt="Pedidos"
+                class="imagem-exercicio"
+            >
+        </section>
+
+        <section class="cardapio">
+            <p><strong>Cardápio:</strong></p>
+
+            <p>
+                Código 1 → Cachorro Quente (R$11,00)
+            </p>
+            <p>
+                Código 2 → Bauru (R$8,50)
+            </p>
+            <p>
+                Código 3 → Misto Quente (R$8,00)
+            </p>
+            <p>
+                Código 4 → Hambúrguer (R$9,00)
+            </p>
+            <p>
+                Código 5 → Cheeseburger (R$10,00)
+            </p>
+            <p>
+                Código 6 → Refrigerante (R$4,50)
+            </p>
+        </section>
+
+        <section class="pedido">
+            <input
+                id="codigo"
+                type="number"
+                placeholder="Digite o código"
+            >
+
+            <input
+                id="quantidade"
+                type="number"
+                placeholder="Informe a quantidade"
+            >
+
+            <button onclick="calcularLanche()">
+                Fazer Pedido
+            </button>
+        </section>
+
+        <section
+            id="resultado"
+            class="resultado">
+        </section>
+
+        <footer>
+            <a href="index.html" class="voltar">
+                ⬅ Retornar
+            </a>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

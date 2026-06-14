@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Vendas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="caixa">
+
+        <header class="cabecalho-vendas">
+            <h2> Sistema de Vendas</h2>
+
+            <img
+                src="IMG\994737.png"
+                alt="Carrinho"
+                class="imagem-exercicio"
+            >
+        </header>
+
+        <section class="formas-pagamento">
+            <p><strong>Formas de pagamento disponíveis:</strong></p>
+
+            <ul>
+                <li>A → Dinheiro ou cheque (10% de desconto)</li>
+                <li>B → Cartão à vista (15% de desconto)</li>
+                <li>C → Parcelamento em 2x sem juros</li>
+                <li>D → Parcelamento em 2x com acréscimo de 10%</li>
+            </ul>
+        </section>
+
+        <section class="entrada-dados">
+            <input
+                type="number"
+                id="valor"
+                placeholder="Digite o valor do produto"
+            >
+
+            <input
+                type="text"
+                id="pagamento"
+                placeholder="Forma de pagamento (A/B/C/D)"
+            >
+
+            <button onclick="calcularVenda()">
+                Processar Venda
+            </button>
+        </section>
+
+        <section
+            id="resultado"
+            class="resultado">
+        </section>
+
+        <footer>
+            <a href="index.html" class="voltar">
+                ⬅ Retornar ao menu
+            </a>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

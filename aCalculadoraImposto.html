@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Calculadora de Imposto</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+</head>
+
+<body>
+
+    <main class="caixa">
+
+        <header>
+            <h2>Calculadora de Imposto de Veículo</h2>
+        </header>
+
+        <section>
+
+            <img
+                src="IMG\48688.png"
+                alt="Carro"
+                class="imagem-exercicio">
+
+            <input
+                id="ano"
+                type="number"
+                placeholder="Ano do veículo">
+
+            <input
+                placeholder="Valor de tabela"
+                type="number"
+                id="valor">
+
+            <button onclick="calcularImposto()">
+                Calcular Imposto
+            </button>
+
+            <div class="resultado" id="resultado"></div>
+
+        </section>
+
+        <footer>
+            <a
+                class="voltar"
+                href="index.html">
+                Voltar ao Menu
+            </a>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
