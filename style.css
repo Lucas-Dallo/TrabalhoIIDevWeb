@@ -9,7 +9,7 @@ html{
     scroll-behavior: smooth;
 }
 
-/* FUNDO TEMA COPA */
+
 body{
     min-height: 100vh;
     padding: 20px;
@@ -67,7 +67,7 @@ body::before{
     }
 }
 
-/* TOPO */
+
 .hero{
     width: 100%;
     text-align: center;
@@ -75,9 +75,9 @@ body::before{
     margin-bottom: 30px;
     background: rgba(0,0,0,0.45);
     color: white;
-    border-radius: 18px;
+    border-radius: 50px;
     backdrop-filter: blur(8px);
-    border: 2px solid rgba(255,223,0,.4);
+    border: 5px solid rgba(255,223,0,.4);
 }
 
 .hero h1{
@@ -92,7 +92,6 @@ body::before{
     color: #dbeafe;
 }
 
-/* BANNER */
 .banner{
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -117,11 +116,11 @@ body::before{
     color: #334155;
 }
 
-/* MENU */
+
 .menu{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 15px;
 }
 
 .card{
@@ -142,10 +141,8 @@ body::before{
     transform: translateY(-8px) scale(1.03);
 }
 
-/* CORES DOS CARDS */
-.vermelho{
-    background: linear-gradient(135deg,#dc2626,#991b1b);
-}
+
+
 
 .verde{
     background: linear-gradient(135deg,#009c3b,#006b2d);
@@ -156,25 +153,7 @@ body::before{
     color: black;
 }
 
-.roxo{
-    background: linear-gradient(135deg,#7c3aed,#4c1d95);
-}
 
-.azul{
-    background: linear-gradient(135deg,#002776,#1d4ed8);
-}
-
-.rosa{
-    background: linear-gradient(135deg,#db2777,#9d174d);
-}
-
-.turquesa{
-    background: linear-gradient(135deg,#0891b2,#164e63);
-}
-
-.laranja{
-    background: linear-gradient(135deg,#ea580c,#9a3412);
-}
 
 .card h3{
     font-size: 1.5rem;
@@ -185,7 +164,7 @@ body::before{
     font-size: .95rem;
 }
 
-/* CAIXAS DOS EXERCÍCIOS */
+
 .caixa{
     max-width: 750px;
     margin: auto;
@@ -198,11 +177,11 @@ body::before{
 
 .caixa h2{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #009c3b;
 }
 
-/* IMAGEM */
+
 .imagem-exercicio{
     width: 180px;
     display: block;
@@ -214,7 +193,7 @@ body::before{
     transform: scale(1.05);
 }
 
-/* INPUTS */
+
 input{
     width: 100%;
     padding: 14px;
@@ -229,7 +208,7 @@ input:focus{
     border-color: #009c3b;
 }
 
-/* BOTÃO */
+
 button{
     width: 100%;
     padding: 14px;
@@ -248,7 +227,7 @@ button:hover{
     background: linear-gradient(135deg,#00b140,#007a33);
 }
 
-/* RESULTADO */
+
 .resultado{
     margin-top: 20px;
     padding: 18px;
@@ -259,7 +238,7 @@ button:hover{
     font-weight: bold;
 }
 
-/* BOTÃO VOLTAR */
+
 .voltar{
     display: inline-block;
     margin-top: 20px;
@@ -275,7 +254,7 @@ button:hover{
     background: #001b52;
 }
 
-/* FOOTER */
+
 footer{
     text-align: center;
     margin-top: 40px;
@@ -284,7 +263,7 @@ footer{
     font-weight: bold;
 }
 
-/* RESPONSIVO */
+
 @media(max-width: 768px){
     .banner{
         grid-template-columns: 1fr;
